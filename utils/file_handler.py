@@ -24,7 +24,7 @@ def get_file_md5_hex(filepath):         #获取md5值
                     md5_obj.update(chunk)
                     chunk=f.read(chunk_size)
                 """
-            md5_hex=md5_obj.hexdigest()
+            md5_hex=md5_obj.hexdigest()     #返回十六进制的字符串
             return md5_hex
     except Exception as e:
         logger.error(f"计算文件{filepath}md5失败，{str(e)}")

@@ -1,10 +1,10 @@
-from utils.config_handler import chroma_config
 from langchain_chroma import Chroma
-from utils.path_tool import get_abs_path
-from model.factory import embedding_model
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from utils.path_tool import get_abs_path
 from utils.file_handler import get_file_md5_hex, listdir_with_allowed_type, pdf_loader,txt_loader
 from utils.logger_handler import logger
+from utils.config_handler import chroma_config
+from model.factory import embedding_model
 import os
 
 class VectorStoreService:
@@ -14,7 +14,6 @@ class VectorStoreService:
             embedding_function=embedding_model,
             persist_directory=get_abs_path(chroma_config['persist_directory'])
         )
-        self.spliter=None
 
         self.spliter=RecursiveCharacterTextSplitter(
             chunk_size=chroma_config['chunk_size'],
@@ -32,8 +31,7 @@ class VectorStoreService:
         要计算文件的MD5做去重
         ：return：None
         """
-        pass
-
+        
         def check_md5_hex(md5_for_check:str):
             if not os.path.exists(get_abs_path(chroma_config['md5_hex_store'])):
                 open(get_abs_path(chroma_config["md5_hex_store"]),"w",encoding="utf-8").close()

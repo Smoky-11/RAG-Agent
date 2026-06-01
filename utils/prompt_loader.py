@@ -44,8 +44,3 @@ def load_report_prompts():
         logger.error(f"[report_system_prompts]解析Report报告提示词错误，{str(e)}")
         raise e
     
-
-if __name__=="__main__":
-    # print(load_system_prompts())
-    # print(load_rag_prompts())
-    print(load_report_prompts())
