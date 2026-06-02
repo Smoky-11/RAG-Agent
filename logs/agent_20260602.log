@@ -1,0 +1,36 @@
+2026-06-02 15:43:28,677 - agent - WARNING - agent_tools.py : 103 - [fetch_external_data]未能检索到用户：1001在2025-06的使用记录数据
+2026-06-02 15:44:53,896 - agent - WARNING - agent_tools.py : 103 - [fetch_external_data]未能检索到用户：1005在2025-06的使用记录数据
+2026-06-02 15:46:50,995 - agent - WARNING - agent_tools.py : 103 - [fetch_external_data]未能检索到用户：1005在2025-06的使用记录数据
+2026-06-02 15:48:29,807 - agent - WARNING - agent_tools.py : 103 - [fetch_external_data]未能检索到用户：1015在2025-06的使用记录数据
+2026-06-02 17:02:59,576 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有1条消息。
+2026-06-02 17:02:59,576 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]HumanMessage | 给我生成我的使用报告
+2026-06-02 17:03:01,998 - agent - INFO - middle_ware.py : 14 - [tool monitor]执行工具：fill_context_for_report
+2026-06-02 17:03:01,998 - agent - INFO - middle_ware.py : 15 - [tool monitor]传入参数：{}
+2026-06-02 17:03:01,998 - agent - INFO - middle_ware.py : 19 - [tool monitor]工具fill_context_for_report调用成功
+2026-06-02 17:03:01,998 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有3条消息。
+2026-06-02 17:03:01,998 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-06-02 17:03:03,940 - agent - INFO - middle_ware.py : 14 - [tool monitor]执行工具：get_user_id
+2026-06-02 17:03:03,940 - agent - INFO - middle_ware.py : 15 - [tool monitor]传入参数：{}
+2026-06-02 17:03:03,940 - agent - INFO - middle_ware.py : 19 - [tool monitor]工具get_user_id调用成功
+2026-06-02 17:03:03,941 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有5条消息。
+2026-06-02 17:03:03,941 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]ToolMessage | 1004
+2026-06-02 17:03:05,219 - agent - INFO - middle_ware.py : 14 - [tool monitor]执行工具：get_current_month
+2026-06-02 17:03:05,220 - agent - INFO - middle_ware.py : 15 - [tool monitor]传入参数：{}
+2026-06-02 17:03:05,220 - agent - INFO - middle_ware.py : 19 - [tool monitor]工具get_current_month调用成功
+2026-06-02 17:03:05,221 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有7条消息。
+2026-06-02 17:03:05,221 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]ToolMessage | 2025-08
+2026-06-02 17:03:07,753 - agent - INFO - middle_ware.py : 14 - [tool monitor]执行工具：fetch_external_data
+2026-06-02 17:03:07,753 - agent - INFO - middle_ware.py : 15 - [tool monitor]传入参数：{'user_id': '1004', 'month': '2025-08'}
+2026-06-02 17:03:07,753 - agent - INFO - middle_ware.py : 19 - [tool monitor]工具fetch_external_data调用成功
+2026-06-02 17:03:07,766 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有9条消息。
+2026-06-02 17:03:07,766 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]ToolMessage | {"特征": "85㎡ | 2猫 | 混合地面", "效率": "猫砂泼洒处理:10次/月\\n自动回充成功率:85%", "耗材": "主刷缠绕:严重++\\n滤网更换:已更换", "对比": "防缠绕主刷已更换+清洁效率暂未提升"}
+2026-06-02 17:03:10,983 - agent - INFO - middle_ware.py : 14 - [tool monitor]执行工具：rag_summarize
+2026-06-02 17:03:10,983 - agent - INFO - middle_ware.py : 15 - [tool monitor]传入参数：{'query': '多猫家庭扫地机器人主刷缠绕严重处理方法'}
+2026-06-02 17:03:13,864 - agent - INFO - middle_ware.py : 19 - [tool monitor]工具rag_summarize调用成功
+2026-06-02 17:03:13,865 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有11条消息。
+2026-06-02 17:03:13,865 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]ToolMessage | 多猫家庭扫地机器人主刷缠绕严重时，应每次清扫完成后立即清理主刷上的毛发和线头，使用剪刀小心剪断缠绕物，切勿强行拉扯；每周拆解主刷滚刷仓，用软毛刷彻底清理内部灰尘和毛发；若主刷打滑，需检查滚刷胶条是否磨损并及时清洁或更换；还可考虑开启防缠绕功能或更换为防缠绕款主刷。
+2026-06-02 17:03:16,099 - agent - INFO - middle_ware.py : 14 - [tool monitor]执行工具：rag_summarize
+2026-06-02 17:03:16,099 - agent - INFO - middle_ware.py : 15 - [tool monitor]传入参数：{'query': '扫地机器人自动回充成功率低的原因及解决方案'}
+2026-06-02 17:03:19,911 - agent - INFO - middle_ware.py : 19 - [tool monitor]工具rag_summarize调用成功
+2026-06-02 17:03:19,911 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有13条消息。
+2026-06-02 17:03:19,911 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]ToolMessage | 扫地机器人自动回充成功率低的原因可能包括：APP中“自动回充”功能被关闭、地图中充电座位置被修改、回充传感器积灰。解决方案为：确认开启自动回充功能、检查并修正充电座位置、清理回充传感器灰尘。此外，若电量低于20%，机器人会优先回充；若设置正确但仍异常，可尝试重启设备或排查故障提示。
