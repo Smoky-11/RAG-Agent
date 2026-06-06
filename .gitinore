@@ -1,7 +1,0 @@
-# .gitignore
-.env
-.env.local
-.env.*.local
-keys/
-*.pem
-*.key
