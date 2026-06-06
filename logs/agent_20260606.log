@@ -1,0 +1,63 @@
+2026-06-06 16:20:21,442 - agent - INFO - get_city_weather.py : 99 - Token生成成功，已调用API查询广州天气。
+JWT: eyJhbGciOiJFZERTQSIsImtpZCI6IkNNNThHVjRZWU0iLCJ0eX...
+2026-06-06 16:24:00,659 - agent - INFO - get_city_weather.py : 99 - Token生成成功，已调用API查询广州天气。
+JWT: eyJhbGciOiJFZERTQSIsImtpZCI6IkNNNThHVjRZWU0iLCJ0eX...
+2026-06-06 16:24:19,888 - agent - INFO - get_city_weather.py : 99 - Token生成成功，已调用API查询美国天气。
+JWT: eyJhbGciOiJFZERTQSIsImtpZCI6IkNNNThHVjRZWU0iLCJ0eX...
+2026-06-06 16:26:31,282 - agent - ERROR - get_city_weather.py : 61 - 城市查询接口请求失败，HTTP状态码: 400
+2026-06-06 16:27:27,980 - agent - INFO - get_city_weather.py : 99 - Token生成成功，已调用API查询广州天气。
+JWT: eyJhbGciOiJFZERTQSIsImtpZCI6IkNNNThHVjRZWU0iLCJ0eX...
+2026-06-06 16:30:36,639 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有1条消息。
+2026-06-06 16:30:36,640 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]HumanMessage | hello
+2026-06-06 16:30:49,270 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有1条消息。
+2026-06-06 16:30:49,270 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]HumanMessage | 今天天气如何
+2026-06-06 16:30:51,273 - agent - INFO - middle_ware.py : 14 - [tool monitor]执行工具：get_user_location
+2026-06-06 16:30:51,274 - agent - INFO - middle_ware.py : 15 - [tool monitor]传入参数：{}
+2026-06-06 16:30:51,274 - agent - INFO - middle_ware.py : 19 - [tool monitor]工具get_user_location调用成功
+2026-06-06 16:30:51,275 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有3条消息。
+2026-06-06 16:30:51,275 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]ToolMessage | 杭州
+2026-06-06 16:30:53,557 - agent - INFO - middle_ware.py : 14 - [tool monitor]执行工具：get_weather
+2026-06-06 16:30:53,558 - agent - INFO - middle_ware.py : 15 - [tool monitor]传入参数：{'city': '杭州'}
+2026-06-06 16:30:53,558 - agent - INFO - middle_ware.py : 19 - [tool monitor]工具get_weather调用成功
+2026-06-06 16:30:53,559 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有5条消息。
+2026-06-06 16:30:53,559 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]ToolMessage | 城市杭州天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-06-06 17:33:27,783 - agent - ERROR - get_city_weather.py : 100 - 解析返回数据失败，请检查API认证是否有效。错误：Unable to load PEM file. See https://cryptography.io/en/latest/faq/#why-can-t-i-import-my-pem-file for more details. MalformedFraming
+2026-06-06 17:36:07,357 - agent - ERROR - get_city_weather.py : 100 - 解析返回数据失败，请检查API认证是否有效。错误：Unable to load PEM file. See https://cryptography.io/en/latest/faq/#why-can-t-i-import-my-pem-file for more details. MalformedFraming
+2026-06-06 17:38:09,386 - agent - INFO - get_city_weather.py : 93 - Token生成成功，已调用API查询广州天气。
+JWT: eyJhbGciOiJFZERTQSIsImtpZCI6IkNNNThHVjRZWU0iLCJ0eX...
+2026-06-06 18:18:09,174 - agent - INFO - get_city_weather.py : 51 - IP定位成功: Guangzhou
+2026-06-06 18:57:39,257 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有1条消息。
+2026-06-06 18:57:39,257 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]HumanMessage | hello
+2026-06-06 18:57:55,827 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有1条消息。
+2026-06-06 18:57:55,827 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]HumanMessage | 今天天气如何
+2026-06-06 18:57:58,222 - agent - INFO - middle_ware.py : 14 - [tool monitor]执行工具：get_user_location
+2026-06-06 18:57:58,222 - agent - INFO - middle_ware.py : 15 - [tool monitor]传入参数：{}
+2026-06-06 18:57:58,729 - agent - INFO - get_city_weather.py : 51 - IP定位成功: Guangzhou
+2026-06-06 18:57:58,730 - agent - INFO - agent_tools.py : 59 - 用户所在城市：Guangzhou
+2026-06-06 18:57:58,730 - agent - INFO - middle_ware.py : 19 - [tool monitor]工具get_user_location调用成功
+2026-06-06 18:57:58,731 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有3条消息。
+2026-06-06 18:57:58,731 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]ToolMessage | Guangzhou
+2026-06-06 18:58:02,690 - agent - INFO - middle_ware.py : 14 - [tool monitor]执行工具：get_weather
+2026-06-06 18:58:02,691 - agent - INFO - middle_ware.py : 15 - [tool monitor]传入参数：{'city': 'Guangzhou'}
+2026-06-06 18:58:09,154 - agent - INFO - get_city_weather.py : 117 - Token生成成功，已调用API查询Guangzhou天气。
+JWT: eyJhbGciOiJFZERTQSIsImtpZCI6IkNNNThHVjRZWU0iLCJ0eX...
+2026-06-06 18:58:09,156 - agent - INFO - middle_ware.py : 19 - [tool monitor]工具get_weather调用成功
+2026-06-06 18:58:09,157 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有5条消息。
+2026-06-06 18:58:09,157 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]ToolMessage | 🌤️ 中国 广东省 广州 实时天气
+        温度：24°C       体感温度：27°C
+        天气状况：中雨      湿度：95%
+        风向：西南风 2级      
+        更新时间：2026-06-06T18:54+08:00
+2026-06-06 18:58:56,400 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有1条消息。
+2026-06-06 18:58:56,400 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]HumanMessage | 汕头呢
+2026-06-06 18:58:58,672 - agent - INFO - middle_ware.py : 14 - [tool monitor]执行工具：get_weather
+2026-06-06 18:58:58,672 - agent - INFO - middle_ware.py : 15 - [tool monitor]传入参数：{'city': '汕头'}
+2026-06-06 18:59:01,733 - agent - INFO - get_city_weather.py : 117 - Token生成成功，已调用API查询汕头天气。
+JWT: eyJhbGciOiJFZERTQSIsImtpZCI6IkNNNThHVjRZWU0iLCJ0eX...
+2026-06-06 18:59:01,735 - agent - INFO - middle_ware.py : 19 - [tool monitor]工具get_weather调用成功
+2026-06-06 18:59:01,736 - agent - INFO - middle_ware.py : 33 - [log_before_model]即将调用模型，带有3条消息。
+2026-06-06 18:59:01,736 - agent - DEBUG - middle_ware.py : 34 - [log_before_model]ToolMessage | 🌤️ 中国 广东省 汕头 实时天气
+        温度：25°C       体感温度：27°C
+        天气状况：小雨      湿度：88%
+        风向：东南风 2级      
+        更新时间：2026-06-06T18:54+08:00

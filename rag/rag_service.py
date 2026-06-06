@@ -45,6 +45,3 @@ class RAGSummarizeService(object):
             }
         )
     
-if __name__ == "__main__":
-    rag=RAGSummarizeService()
-    print(rag.rag_summarize('那种扫地机器人适合小户型'))

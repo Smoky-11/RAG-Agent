@@ -5,8 +5,18 @@ from rag.rag_service import RAGSummarizeService
 import random
 from utils.config_handler import agent_config
 from utils.path_tool import get_abs_path
+from dotenv import load_dotenv
+from api.get_city_weather import get_weather_now, get_location_by_ip
 
 rag = RAGSummarizeService()
+
+
+load_dotenv(encoding='utf-8')
+
+PRIVATE_KEY_PEM=os.getenv("PRIVATE_KEY_PEM","").encode()
+KID=os.getenv("KID","")
+SUB=os.getenv("SUB","")
+API_HOST=os.getenv("API_HOST","")
 
 user_ids = ["1001", "1002", "1003", "1004", "1005", "1006", "1007", "1008", "1009", "1010",]
 month_arr = ["2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06",
@@ -20,14 +30,34 @@ def rag_summarize(query: str) -> str:
     return rag.rag_summarize(query)
 
 
-@tool(description="获取指定城市的天气，以消息字符串的形式返回")
+@tool(description="用户输入城市名，获取指定城市的天气，以消息字符串的形式返回")
 def get_weather(city: str) -> str:
-    return f"城市{city}天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低"
+    if PRIVATE_KEY_PEM and KID and SUB and API_HOST:
+        return get_weather_now(city)
+    else:
+        logger.warning(f'[get_weather]和风天气未配置，使用模拟天气数据')
+        return f"城市{city}天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低"
+
+
+@tool(description="测试和风天气API连接状态")
+def test_qweather_connection() -> str:
+    """测试和风天气API是否正常工作"""
+    try:
+        test_city = "北京"
+        result = get_weather(test_city)
+        if "失败" not in result and "错误" not in result:
+            return f"✅ 和风天气API连接正常，测试查询{test_city}成功"
+        else:
+            return f"❌ 和风天气API连接异常：{result}"
+    except Exception as e:
+        return f"❌ 和风天气API连接失败：{str(e)}"
 
 
 @tool(description="获取用户所在城市的名称，以纯字符串形式返回")
 def get_user_location() -> str:
-    return random.choice(["深圳", "合肥", "杭州"])
+    city=get_location_by_ip()
+    logger.info(f'用户所在城市：{city}')
+    return city
 
 
 @tool(description="获取用户的ID，以纯字符串形式返回")
@@ -43,12 +73,6 @@ def get_current_month() -> str:
 def generate_external_data():
     """
     {
-        "user_id": {
-            "month" : {"特征": xxx, "效率": xxx, ...}
-            "month" : {"特征": xxx, "效率": xxx, ...}
-            "month" : {"特征": xxx, "效率": xxx, ...}
-            ...
-        },
         "user_id": {
             "month" : {"特征": xxx, "效率": xxx, ...}
             "month" : {"特征": xxx, "效率": xxx, ...}
