@@ -1,4 +1,3 @@
-from ast import main
 import os
 import time
 import jwt
